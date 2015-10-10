@@ -11,7 +11,7 @@
 
 <!-- Customizable CSS -->
 <link rel="stylesheet" href="<c:url value="/resources/css/main.css"></c:url>">
-<link rel="stylesheet" href="<c:url value="/resources/css/green.css"></c:url>">
+<link rel="stylesheet" href="<c:url value="/resources/css/dark-green.css"></c:url>">
 <link rel="stylesheet" href="<c:url value="/resources/css/owl.carousel.css"></c:url>">
 <link rel="stylesheet" href="<c:url value="/resources/css/owl.transitions.css"></c:url>">
 <link rel="stylesheet" href="<c:url value="/resources/css/animate.min.css"></c:url>">
