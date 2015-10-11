@@ -5,7 +5,14 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-
+<!-- ============================================================= FOOTER ============================================================= -->
+<footer id="footer" class="color-bg">
+    
+    <div class="container">
+        <div class="row no-margin widgets-row">
+            
+            <tiles:insertAttribute name="footerExtras" ignore="true" />
+            
         </div><!-- /.widgets-row-->
     </div><!-- /.container -->
 
@@ -122,3 +129,30 @@
         </ul>
     </div><!-- /.widget -->
 </div><!-- /.link-widget -->
+
+<!-- ============================================================= LINKS FOOTER : END ============================================================= -->            </div>
+        </div><!-- /.container -->
+    </div><!-- /.link-list-row -->
+
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 no-margin">
+                <div class="copyright">
+                    &copy; <a href="index.html">Smart Shopping</a> - all rights reserved
+                </div><!-- /.copyright -->
+            </div>
+            <div class="col-xs-12 col-sm-6 no-margin">
+                <div class="payment-methods ">
+                    <ul>
+                        <li><img alt="" src="<c:url value="/resources/images/payments/payment-visa.png"></c:url>"></li>
+                        <li><img alt="" src="<c:url value="/resources/images/payments/payment-master.png"></c:url>"></li>
+                        <li><img alt="" src="<c:url value="/resources/images/payments/payment-paypal.png"></c:url>"></li>
+                        <li><img alt="" src="<c:url value="/resources/images/payments/payment-skrill.png"></c:url>"></li>
+                    </ul>
+                </div><!-- /.payment-methods -->
+            </div>
+        </div><!-- /.container -->
+    </div><!-- /.copyright-bar -->
+
+</footer><!-- /#footer -->
+<!-- ============================================================= FOOTER : END ============================================================= -->   </div><!-- /.wrapper -->
