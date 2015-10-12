@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+<!-- Note -->
+<!-- Remember always to make definition name different from title name to avoid exception, this seems tiles bug -->
+
+<tiles-definitions>
+    <definition name="startPage" extends="defaultTemplate">
+        <put-attribute name="navigationVertical" value="/WEB-INF/tiles/template/navigationVertical.jsp" />
+        <put-attribute name="content" value="/WEB-INF/tiles/template/defaultContent.jsp" />
+        <put-attribute name="extras" value="/WEB-INF/tiles/template/defaultExtras.jsp" />
+        <put-attribute name="footer">
+            <definition template="/WEB-INF/tiles/template/footer.jsp">
+                <put-attribute name="footerExtras" value="/WEB-INF/tiles/template/defaultFooterExtras.jsp" />
+            </definition>
+        </put-attribute>
+    </definition>
+    
+    <definition name="testPage" extends="defaultTemplate">
+        <put-attribute name="header">
+            <definition template="/WEB-INF/tiles/template/header.jsp">
+                <put-attribute name="navigationHorizontal" value="/WEB-INF/tiles/template/navigationHorizontal.jsp" />
+            </definition>
+        </put-attribute>
+    </definition>
+</tiles-definitions>

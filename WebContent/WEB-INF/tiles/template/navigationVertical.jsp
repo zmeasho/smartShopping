@@ -1,4 +1,4 @@
-        <div class="col-xs-12 col-sm-4 col-md-3 sidemenu-holder">
+<div class="col-xs-12 col-sm-4 col-md-3 sidemenu-holder">
             <!-- ================================== TOP NAVIGATION ================================== -->
 <div class="side-menu animate-dropdown">
     <div class="head"><i class="fa fa-list"></i> all departments</div>        
