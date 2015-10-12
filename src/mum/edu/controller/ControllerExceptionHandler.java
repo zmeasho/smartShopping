@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
-	   public static final String DEFAULT_ERROR_VIEW = "error";
+	 /*  public static final String DEFAULT_ERROR_VIEW = "error";
 
 
 	  @ExceptionHandler(value = AccessDeniedException.class)
@@ -38,5 +38,5 @@ public class ControllerExceptionHandler {
 	        mav.setViewName(DEFAULT_ERROR_VIEW);
 	        return mav;
 	    }
-
+*/
 }
