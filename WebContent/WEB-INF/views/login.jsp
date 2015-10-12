@@ -10,18 +10,13 @@
 </head>
 <body>
 	<section>
-		<div class="jumbotron">
-			<div class="container">
-				<h1>Welcome Kimosabe!! </h1>
-			</div>
-		</div>
 	</section>
 <div class="container">
     <div class="row">
 		<div class="col-md-4 col-md-offset-4">
     		<div class="panel panel-default">
 			  	<div class="panel-heading">
-			    	<h3 class="panel-title">Please sign in</h3>
+			    	<h3 class="panel-title">Login</h3>
 			 	</div>
 			  	<div class="panel-body">
 			  	<c:if test="${not empty error}">
@@ -29,15 +24,15 @@
 						<spring:message code="AbstractUserDetailsAuthenticationProvider.badCredentials"/><br />
 					</div>
 				</c:if>
-			    	<form action="<spring:url value="/j_spring_security_check"></spring:url>" method="post">
+			    	<form action="<c:url value="/j_spring_security_check"></c:url>" method="post">
                     <fieldset>
 			    	  	<div class="form-group">
-			    		    <input class="form:input-large" placeholder="User Name" name='j_username' type="text">
+			    		    <input class="form-control" placeholder="User Name" name='j_username' type="text">
 			    		</div>
 			    		<div class="form-group">
-			    			<input class=" form:input-large" placeholder="Password" name='j_password'  type="password" value="">
+			    			<input class="form-control" placeholder="Password" name='j_password'  type="password" value="">
 			    		</div>
-			    		<input class="btn btn-lg btn-success btn-mini" type="submit" value="Login">
+			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
 			    	</fieldset>
 			      	</form>
 			    </div>

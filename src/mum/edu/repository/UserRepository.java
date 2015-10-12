@@ -4,8 +4,11 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import mum.edu.domain.Credentials;
+import mum.edu.domain.User;
 @Repository
-public interface CredentialsRepository extends CrudRepository<Credentials, String> {
-	public Credentials getCredentialByUsername(String username);
+public interface UserRepository extends CrudRepository<User, Long>{
+	
+	public User getUserBycredentials(Credentials userCredntials);
+	
 
 }
