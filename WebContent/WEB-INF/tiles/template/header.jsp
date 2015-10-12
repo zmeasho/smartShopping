@@ -45,7 +45,7 @@
                         <li><a href="blog-post.html">Blog Post</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="authentication.html">Login/Register</a></li>
+                        <li><a href="<spring:url value='/signup' />" class="btn btn-default pull-right">Login/Register</a></li>
                     </ul>
                 </li>
             </ul>
@@ -71,8 +71,8 @@
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dollar (US)</a></li>
                     </ul>
                 </li>
-                <li><a href="authentication.html">Register</a></li>
-                <li><a href="authentication.html">Login</a></li>
+                <li><a href="<spring:url value='/signup' />" class="btn btn-default pull-right">">Register</a></li>
+                <li><a href="<spring:url value='/login' />">Login</a></li>
             </ul>
         </div><!-- /.col -->
     </div><!-- /.container -->
