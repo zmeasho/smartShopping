@@ -22,9 +22,7 @@ public class UserServiceImpl implements UserService {
 	public void addNewUser(User user) {
 		// TODO Auto-generated method stub
 		credentialRepository.save(user.getCredentials());
-		userRepository.save(user);
-		
-		
+		userRepository.save(user);	
 	}
 
 	@Override

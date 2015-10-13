@@ -78,14 +78,14 @@
 								</div>
 							</div>
 					
-					       <%--  <div class="form-group">
+					        <div class="form-group">
 								<label class="col-sm-2 control-label" for="amount"><spring:message
 										code="creditCard.form.amount.label" /></label>
 								<div class="col-xs-4">
 									<form:input id="amount" path="amount"  value="${amountDue}" readonly="true" class="form-control"/>
 									<form:errors path="amount" cssClass="text-danger" />
 								</div>
-							</div> --%>
+							</div>
 							
 							<div class="form-group">
 								<div class="col-lg-offset-2 col-lg-10">

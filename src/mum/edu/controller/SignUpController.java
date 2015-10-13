@@ -18,8 +18,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import mum.edu.Services.AppSettingsService;
 import mum.edu.Services.CreditCardService;
+import mum.edu.Services.CreditCardTransactionService;
 import mum.edu.Services.UserService;
 import mum.edu.domain.CreditCard;
+import mum.edu.domain.CreditCardTransaction;
 import mum.edu.domain.User;
 
 
@@ -29,15 +31,15 @@ public class SignUpController {
 	@Autowired
 	UserService userService;
 
-	//@Autowired
-	//CreditCardService creditCardService;
+	@Autowired
+	CreditCardService creditCardService;
 
 	@Autowired
 	AppSettingsService appSettingsService;
-	/*
+	
 	@Autowired
 	CreditCardTransactionService ccTransactionService;
-*/
+
 	User tempUser = new User();
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
@@ -50,9 +52,7 @@ public class SignUpController {
 			@ModelAttribute("creditCard") CreditCard creditCard,
 			BindingResult result, RedirectAttributes redirectAttribute,
 			Model model) {
-		System.out.println("come here11111111111111111111111111111111111");
 		if (result.hasErrors()) {
-			System.out.println("come 2222222222222222222222222222222222");
 			return "registration";
 		}
 
@@ -63,15 +63,13 @@ public class SignUpController {
 			model.addAttribute("message",
 					appSettingsService
 					.appSettings("RegistrationSuccess").getParamValue().toString());
-			System.out.println("come 33333333333333333333333333333");
 			return "messagePage";
 		}
-
 		redirectAttribute.addFlashAttribute(user);
 		redirectAttribute.addFlashAttribute(creditCard);
 		return "redirect:/payment";
 	}
-/*
+
 	@RequestMapping(value = "/payment", method = RequestMethod.GET)
 	public String getCreditCard(Model model) {
 		CreditCard creditCard = (CreditCard) (((ModelMap) model)
@@ -150,5 +148,5 @@ public class SignUpController {
 		creditCardService.saveCreditCard(creditCardFound);
 
 	}
-*/
+
 }
