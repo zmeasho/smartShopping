@@ -71,7 +71,7 @@
      
      <!-- rejina -->
     <bean class="org.springframework.web.servlet.view.XmlViewResolver">
-        <property name="location" value="/WEB-INF/spring/contex/jasper-views.xml"/>
+        <property name="location" value="/WEB-INF/spring/context/jasper-view.xml"/>
         <property name="order" value="0"/>
     </bean>
  
