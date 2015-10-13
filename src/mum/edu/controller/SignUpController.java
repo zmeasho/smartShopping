@@ -1,5 +1,6 @@
 package mum.edu.controller;
 
+import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,6 +24,7 @@ import mum.edu.Services.UserService;
 import mum.edu.domain.CreditCard;
 import mum.edu.domain.CreditCardTransaction;
 import mum.edu.domain.User;
+import mum.edu.enumerations.CardType;
 
 
 @Controller
@@ -67,7 +69,7 @@ public class SignUpController {
 		}
 		redirectAttribute.addFlashAttribute(user);
 		redirectAttribute.addFlashAttribute(creditCard);
-		return "redirect:/payment";
+		return "redirect:/payment"; 
 	}
 
 	@RequestMapping(value = "/payment", method = RequestMethod.GET)
@@ -147,6 +149,25 @@ public class SignUpController {
 		//creditCardFound.setCreditCardTransaction(ccTransactionsList);
 		creditCardService.saveCreditCard(creditCardFound);
 
+	}
+	
+	@ModelAttribute("creditCardTypes")
+	public List<String> initializeCreditCardType(Model model) {
+
+		List<String> creditCardTypes = new ArrayList<String>();
+		creditCardTypes.add((CardType.VISA).toString());
+		creditCardTypes.add((CardType.MASTER).toString());
+		return creditCardTypes;
+
+	}
+
+	@ModelAttribute("months")
+	public List<String> initMonths() {
+		List<String> months = new ArrayList<String>();
+		for (int i = 0; i < 12; i++) {
+			months.add(new DateFormatSymbols().getShortMonths()[i]);
+		}
+		return months;
 	}
 
 }
